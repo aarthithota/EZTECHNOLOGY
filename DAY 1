@@ -1,1 +1,81 @@
-HELLO
+Program Efficiency:
+-> efficiency is all abt tym and space complexity
+1. dynamic programing:
+->greedy approach wt ever the sol. for the problem given at the first go is fixed as the final sol.
+note:This is not the best approch for all the scenarios however it also works for some cases
+->In dynamic programming we will be finding out all the possible sols for the given problem out of which the best will be picked
+\\\\\\\\\\\\\Time and Complexity\\\\\\\\\\\\\\\\\
+1.asymptotic
+->omega
+->theta
+->O(n)
+....................................................................................................................
+1)swajith is having 1 lakth in his bank account. 12% rate of interst per anumn.In the 5th month he withdrawed 25,000 rs and in the 9th month he deposited 10,000 rs. how much does he have in his account(simple interest)
+sol:: algorithm 
+.......for first 4 months the amount per month is:
+1,00,000*(12/100)=12,000 per annumn
+for month (12,000/12)=1,000
+for 4 months 4*1000=4000=s1
+......in 5th month 1,00,000-25,000=75,000
+75,000*(12/100)=900 per anumn
+(900/12) =750 per month
+for 5 6 7 8 months 750*4=3000=s2
+.......for 9 10 11 12 months
+75,000+10,000=85,000
+85,000*(12/100)=10200
+(10200/12) per yr
+for 4 months 850*4=3,400=s3
+..........
+so total=85,000+10,400=95,400
+note: formula si=p*t*r/100 per yr
+|.................................................................................................
+a=100
+type(a)// datatype
+id(a)// memory location
+,.................................................................................................
+Structure and Union:
+1.struture
+->diff datatype ele can be stored under same name
+->memory is allocated in sum of dt
+->can call mutliple para at a time
+2.union
+->diff datatype ele can be stored under same name
+->memory is allocated acc to highest dt
+->onlt 1 para at a tym is accessed
+examples of memory alignment:
+struct{                         union{
+int.....4 bytes                 int ...4 bytes
+int.....4 bytes                 int......4 bytes
+}total=8 bytes                   }total=4 bytes
+..                               ..
+struct{                          union{
+int.....4 bytes                   int...double
+double.....4 bytes                 }total=8 bytes
+}total=12 bytes                   ..
+..
+struct{                           union{
+int.....4 bytes                   int....char...
+char.....1 bytes                   }total=4 bytes
+}total=12 bytes
+..
+struct{
+int.....4 bytes
+int.....4 bytes
+}total=8 bytes
+..
+struct{
+double.....8 bytes
+char.....1 bytes
+}total=16 bytes
+..
+struct{
+int.....4 bytes
+double.....4 bytes
+char
+}total=24 bytes
+................................................................
+->irrespective of no.of iteration i.e, i++, i/2 or i*2...the time complexity does change
+
+
+
+
