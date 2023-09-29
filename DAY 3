@@ -1,0 +1,225 @@
+	29/9/23
+Heap memory: instead of storing the data, storing the references. 
+1)	Heap memory
+2)	Quick sort
+3)	Fibanocci series using recursion
+Find the ans for above questions
+Bit manipulation:
+(bitwise operator)
+In c                :  &, |,~(ones compliment, negation),^(XOR)
+In java             :  &, |,~,^
+In python           : &, |,~,^
+Print(10&4+3) = 2 (priority arithmetic) 10=1010 3+4=7 = 0111 so 1010&0111=2
+Print(7+2&4+3&9) 
+           9&4+3&9
+           9&7&9
+            1&9=1
+Negation: find 1’s compliment ( to cal manually)
+Acc to sys : -(n+1) i.e, add 1 to n and put a negative
+10&3&4&5=left to right
+10|3&4=10 ( first and next or)
+Priority for bitwise: ~,&, ^, |
+Priority rule: () pow(a, b) arithmetic(%,* /,=,+ -)
+Cal: 10*4/6+3-1%2
+        40/6+3-1%2
+        6.666+3-1
+        9.666-1
+        8.6666
+First mul then  div then rem then then add then sub==8.66666
+2^31 onwards the expression becomes negative
+Some more examples:
+1)10&4~2 …….invalid
+2)6|3&9+6…….7
+(6|3&15
+ 3&15=0011(3)
+6|3=0111=7)
+
+3)2~4^3*2…….invalid
+4)~9+4&6
+~9=0110	                    ~9=-(9+1)=-10
+6+4&6                       	-10+4&6
+10&6=2(manually)           -6&6=2(system)
+Xor : same bit gives 0(same number get canceled) i.e, 5^5=0, 0^5=5, 5^5^5=5
+Even 1’s: 0 
+1^2^3=0
+0001
+0010
+0011
+  Here in the above expression the no of ones r even so it returns 0
+odd 1’s:1 
+4^5^6=7
+0100
+0101
+0110
+ Here in the above expression the no.of ones is odd so it gives 1
+If it has odd number of xos(no.of operators) then it gives 0. If the xors are even then the no. gives itself
+Inclusive =or
+Exclusive=xor
+<< left shift         (x<<y=x*2^y)
+>>right shift        (if x>>y=x/2^y)
+print(7<<1)…14
+0111<<1(add zeroes towards right)
+1110=14
+print(7>>1) …3
+0111>>1(add zeroes towards left)
+0011=3
+print(5<<2)……20
+print(5>>2)……1
+............................................................................................................................................
+question
+1)after creating an array find out the smallest missing positive integer
+.............................................................................................................................................
+question
+1)after creating an array find out the smallest missing positive integer
+2) in an given array every no. occurs twice
+Find out which occurs once
+
+
+def single_time(arr,n):
+    res=arr[0]
+    #do xor of all elements and return
+    for i in range(1,n):
+        res=res^arr[i]
+    return res
+arr=[2,3,5,4,5,4,3,2,88]
+print(single_time(arr,len(arr)))
+
+output: 88
+.................................................................................................................................................
+questio 2:
+swap 2 numbers using xor
+a=100
+b=200
+print("a:",a,"b:"b)
+a=a^b #a=100^200
+b=a^b  #b=100^200^200 ans 200 200 cancelled b=100
+a=a^b  #a=100^200^100 ans 100 gets cancelled a=200
+print("a:",a,"b:"b
+
+output:
+a:100 b:200
+a:200 b:100
+.......................................................................................................................................................
+question 3: for the given no. n check the kth bit is set or not
+ ex: n=10, k=3
+from n&(1<<k-1) ( generally bits r read from right to left so...the kth position is shifted towards left by 1 bit )
+( so when we use and operator then the ans is 1 when both the inputs r 1 so in order to know whether the kth position has 1 it becomes easy when and operator is used)
+set or not
+1010
+ 321
+set means-> bit should be one
+not set->zero
+program:
+
+n=int(input())
+k=int(input())
+b=n&(1<<k-1)
+if b==1:
+    print("set")
+print("not a set")
+
+output:
+10
+3
+not a set
+>>> 
+.....................................................................................................................
+3)for given n findout xor of all n numbers.
+ex: 6: 1^2^3^4^5^6
+#optimize
+n=1 1 
+2 3 
+3 0
+4 4
+5 1
+6 7
+7 0
+8 8
+9 1
+n=12
+xor=0
+for i in range(1,n+1):
+   xor=xor^i
+print(xor)
+n=7
+xor=0
+if n&4==0:
+   print(n)
+elif n%4==1:
+   print(1)
+elif n%4==2:
+   print(n+1)
+elif n%4==3:
+   print(0)
+above loop is O(n)
+..........................................................................................................................................
+4)given a range (l-r) print xor 
+let say 
+l=2 r=5
+2^3^4^5
+dont use loop*****
+ from the pervious pattern, we can find out 1 to any number from that fig out this
+
+lets say 
+4 to 9
+xor(1 to 9)^xor(1 to 3)
+(1^2^3^4^5^6^7^8^9)^(1^2^3)
+in above 1 2 3 xors will get cancelled
+generalize xor^xor(l-1)
+ program:
+n=int(input())
+m=int(input())
+a=0
+b=0
+if n%4==0:
+   a=n
+elif n%4==1:
+   a=1
+elif n%4==2:
+   a=n+1
+elif n%4==3:
+   a=0
+print("a:",a)
+if m%4==0:
+   b=n
+elif m%4==1:
+   b=1
+elif m%4==2:
+   b=n+1
+elif m%4==3:
+   b=0
+print("b:",b)
+ output:
+4
+9
+a: 4
+b: 1
+.......................................................................................................................................................
+
+even or odd using bitwise
+n=13
+if(n&1==0):
+   print("even")
+print("odd")
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
