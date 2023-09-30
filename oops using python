@@ -122,7 +122,7 @@ for i in range(n):
 print(l)
 for i in range(n):
     print(l.pop())
-print(l)
+print(l) 
 
 .....................................................................
 #queue
@@ -150,4 +150,17 @@ enter no.of ele:5
 4
 5
 []
+..........................................................................
+#using imports
+from collections import deque
+l=deque()
+
+n=int(input("enter no.of ele:"))
+for i in range(n):
+    l.append(int(input()))
+print(l)
+for i in range(n):
+    print(l.popleft())
+print(l)
+
    
