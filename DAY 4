@@ -32,7 +32,7 @@ class to method then use . that is this.a
 methos level variable of arg type (self,x)
 method level variable (self.x)
 in java we use super keyword isame as in python but needed to be imported
-if fn like def __inti__: it is a default constructor
+if fn like def __init__: it is a default constructor
 stack queue linked list trees and graphs and sorts and serached all disscused for memory allocation 
 class A:
    x=10
@@ -49,6 +49,105 @@ obj=B()
 print(obj.x)
 obj.s()
 obj.work(50)
+1)create a cls . which consists of 3 variables with intailization and we have to take 2 methods. the method is a 2 argumented fn, 1st one is string and second is integer and inside the method the string reverse value should be printed. i have to print sqaure  of int agrument value.
+2nd method named display_result inside print lenght of string and print modulus of 2 integer cls level variable
 
-   
+//////////////////////////program////////////////////////////////////////
+class A:
+    a=input()
+    b=int(input())
+    c=int(input())
+    def Method(self,a,b):
+        print(a[::-1])
+        print(b**2)
+    def Display_result(self,a,b,c):
+#self in python is this operator in java and while using this we should be writing self in method argumented
+#self in the method needed because python doesnt have a datatype decalred beforehead so in order to know which type is which self needed to be kept
+        print(len(a))
+        print(b%c)
+obj=A()
+obj.Method(obj.a,obj.b)
+obj.Display_result(obj.a,obj.b,obj.c)
+output:
+aarthi
+5
+10
+ihtraa
+25
+6
+5
+........................................................................................
+class A:
+   a=10
+   def s(self,a):
+      print(a)
+   def d(self):
+      print(self.a)
+obj=A()
+print(obj.s(20))
+   ...........................................................................................
+#stack
+l=[]
+n=int(input("enter no.of ele:"))
+for i in range(n):
+    l.append(int(input()))
+print(l)
+for i in range(n):
+    print(l.pop())
+print(l)
+
+output:
+
+enter no.of ele:5
+2
+6
+4
+9
+7
+[2, 6, 4, 9, 7]
+2
+6
+4
+9
+7
+[]
+...........................................................
+#stack using imports
+from collections import deque
+l=deque()
+
+n=int(input("enter no.of ele:"))
+for i in range(n):
+    l.append(int(input()))
+print(l)
+for i in range(n):
+    print(l.pop())
+print(l)
+
+.....................................................................
+#queue
+l=[]
+n=int(input("enter no.of ele:"))
+for i in range(n):
+    l.append(int(input()))
+print(l)
+for i in range(n):
+    print(l.pop(0))
+print(l)
+
+output:
+
+enter no.of ele:5
+1
+2
+3
+4
+5
+[1, 2, 3, 4, 5]
+1
+2
+3
+4
+5
+[]
    
