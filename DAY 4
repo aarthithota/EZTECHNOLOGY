@@ -1,2 +1,54 @@
                                                                                                                                                                                  30/9/23  
                                                                                                                                                                                     
+ 5 types of object datatypes:
+data types r generally clses in python and variables r known as object(instances)
+35 keywords..in python.....53 keywords in java
+3 types of cls: normal class, abstract class, constructor
+encapsulation: 
+inside a cls we can iclude: (6) in java
+1)member variables 2)constructor 3)static block 4) 5)enum 6)subcls
+in python
+1)number methods 2)enum 3)variable 4)
+enum: combination of class
+if need to declare a private varaibles in cls then add 2 underscores
+x=10
+__y=20(private varaible)
+
+inheritance: using the properties of parents cls
+functions r methods in java
+class a {}
+class b{}
+if b had to inherite the properties of class a then write class b(a)
+the methods of child cls is known to be derived cls/imaginary methods
+x is a varible print(obj.x) is possible
+abstarct is a keyword used in java
+abc is a keyword used in python for abstract
+java suports multiple inheritance only with the help of interface
+in java, inside a cls we cant write a print statement
+abstarction : hiding of information
+cant create an obj for an abstarction
+if need to create then polymorphism
+class to method then use . that is this.a
+methos level variable of arg type (self,x)
+method level variable (self.x)
+in java we use super keyword isame as in python but needed to be imported
+if fn like def __inti__: it is a default constructor
+stack queue linked list trees and graphs and sorts and serached all disscused for memory allocation 
+class A:
+   x=10
+   __y=30
+   def s(self):
+      print("add")
+   def work(self,x):
+      self.x=x
+      print(x)
+class B(A): 
+   print("hii")
+   
+obj=B()
+print(obj.x)
+obj.s()
+obj.work(50)
+
+   
+   
