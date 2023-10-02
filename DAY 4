@@ -1,1 +1,23 @@
 
+check subset sum:
+example:
+arr=[3,12,5,4,24,2]
+target_sum=9
+
+sum a1,a2,a3
+2 cases
+1st case: sum=9-a3 (consider a3)
+2nd:sum=9 (dont consider a3)
+ 
+                                                             sum=5
+                                                             3,4,5
+                                                          c  /    \ dc
+                                                          sum=0   sum=5
+                                                          (3,4)   (3,4)
+                                                                  /   \
+                                                                   sum=1 sum=5
+                                                                    (3)   (3)
+3 steps to be considered:
+1. if last ele is >sum remove that last ele
+2.if last ele <sum,  consider
+3.if last ele <sum dont consider
