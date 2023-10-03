@@ -1,1 +1,52 @@
- 
+ magic square problem:
+consider a 3*3 martrix.the sum of rows colums, diagonals should be same.
+it can be obtained in maultiple ways
+1 method:
+the daigonal ele,emts should be always even 
+the rows should be odd
+5 is fixed at the middle
+2nd method:
+1. rows and columns
+2. rows should be decremented and column should be incremented
+3. once the row reaches negative(row=-1) then replace with n-1
+4.  (col=n) then replace it with 0
+5. if ele already exist then i=i+2 j=j-1  
+6. if both j i r out of bound then i,j= 0,n-2
+............................................................................
+paranthesis problem:
+ program:
+l=list(map(str,input().split(" "))) #the given string gets divided and made into a list
+n=len(l)
+s=[]
+if n%2!=0:
+        print("False")
+else:
+    for i in range(n):
+        match l[i]:
+            case '[':
+                s.append('[')
+            case '{':
+                s.append('{')
+            case '(':
+                s.append('(')
+            case ']':
+                if s[len(s)-1]=='[':
+                    s.pop()
+            case '}':
+                if s[len(s)-1]=='{':
+                    s.pop()
+            case ')':
+                if s[len(s)-1]=='(':
+                    s.pop()
+    print(s)
+    if(len(s)==0):
+        print("True")
+    else:
+        print("False")
+output:
+{ ]
+['{']
+False
+
+idea by #PoorAtCoding alias aarthi
+executed by chennuri swajih gaaru
