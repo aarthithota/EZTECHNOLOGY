@@ -1,0 +1,56 @@
+list appending dynamically by user
+a=[]
+n=int(input('enter the length:'))
+for i in range(0,n):
+    a.append(int(input()))
+print(a)
+''' selection sort take a index value , check it with the next eele, if next ele is small then swap'''
+a=[]
+n=int(input('enter length:'))
+for i in range(0,n):
+    a.append(int(input()))
+
+for i in range(0,len(a)):
+    for j in range(i+1,len(a)):
+        if a[i]>a[j]:
+            t=a[i]
+            a[i]=a[j]
+            a[j]=t
+print(a)
+  ''' selection sort using fn'''
+  def selection_sort(lst):
+    for i in range(0,len(lst)):
+        min_idx=i
+        for j in range(i+1,len(lst)):
+            if lst[j]<lst[min_idx]:
+                min_idx=j
+        lst[i],lst[min_idx]=lst[min_idx],lst[i]
+    for i in range(len(lst)):
+        print(lst[i],end=" ")
+lst=list(map(int,input().split()))
+selection_sort(lst)
+  
+'''1 4 2 7 5
+1 2 4 5 7 '''
+'''lst=list(map(int,input().split(",")))
+1,4,2,7,5
+[1,2,4,5,7]'''
+
+''' quick sort '''
+'''1. take first ele as pivot
+'''2. take i and j(i= after pivot j= last ele)
+'''3. check pivot and i if i>pivot fails then check j if j<pivot then fails so now swap i and j)'''
+def quicksort(lst):
+    if len(lst)<1:
+        return lst
+    else:
+        pv=lst[0]
+        left_lst=[i for i in lst if i<pv]
+        right_lst=[i for i in lst if i>pv]
+        return left_lst+[pv]+right_lst
+lst=[]
+n=int(input())
+for i in range(0,n):
+    lst.append(int(input()))
+print(quicksort(lst))
+        
